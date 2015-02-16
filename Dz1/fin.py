@@ -62,7 +62,7 @@ while k < long:
     while i < long:
         j = 0
         while j < long:
-            if (i != j and ((A[i][k]+A[k][j])!=0) and (1/A[i][j]+1/(A[i][k]+A[k][j]))!=0):
+            if (i != j and ((A[i][k]+A[k][j]) != 0) and (1/A[i][j]+1/(A[i][k]+A[k][j])) != 0):
                 A[i][j] = 1/(1/A[i][j]+1/(A[i][k]+A[k][j]))
             j = j+1
         i = i+1
