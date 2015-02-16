@@ -2,7 +2,7 @@ import time
 import sys
 import xml.dom.minidom
 
-MAX_SIZE = 1000000000.000
+MAX_SIZE = float('+INF')
 
 #begin = date.today()
 #s_in = input("Enter name of input file\n")
@@ -92,7 +92,7 @@ while k < long:
     while i < long:
         j = 0
         while j < long:
-            if i != j:
+            if (i != j and ((A[i][k]+A[k][j])!=0) and (1/A[i][j]+1/(A[i][k]+A[k][j]))!=0):
                 A[i][j] = 1/(1/A[i][j]+1/(A[i][k]+A[k][j]))
             j = j+1
         i = i+1
@@ -114,4 +114,3 @@ f1.close()
 #end  = datetime.time()
 
 print(' Time(ms) : ', (time.process_time()*1000))
-t = input()
