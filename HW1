@@ -1,11 +1,13 @@
 import time
+import sys
+import xml
+
 start = int(round(time.time()*1000))
 
 def im_xml_csv(argv):
 	inname = argv[0]
 	outname = argv[1]
 	
-	import xml
 	from xml.etree import ElementTree
 	tree = ElementTree.parse(inname)
 	elem = tree.findall('.//net')
@@ -70,7 +72,6 @@ def im_xml_csv(argv):
 			fl.write("\n")
 
 
-import sys
 im_xml_csv(sys.argv[1:])
 
 finish = int(round(time.time()*1000))
