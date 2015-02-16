@@ -79,4 +79,3 @@ im_xml_csv(sys.argv[1:])
 
 finish = int(round(time.time()*1000))
 print(finish-start)
-
